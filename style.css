@@ -4,10 +4,10 @@ body {
 font-family: Arial, sans-serif;
 }
 .bouton-domaine {
-background: red;
-color: white;
 border-radius: 10px;
 padding: 10px;
 margin: 20px;
+background: red;
+color: white;
 }
 
