@@ -16,5 +16,11 @@ body {
 .bouton-domaine.dessin {
     background: blue;
 }
+.bouton-domaine.montage {
+    background: purple;
+}
 
+.bouton-domaine.ecriture {
+    background: pink;
+}
 
