@@ -23,4 +23,6 @@ body {
 .bouton-domaine.ecriture {
     background: pink;
 }
-
+h1 {
+    font-size: 50px;
+}
