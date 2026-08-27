@@ -29,4 +29,8 @@ letter-spacing: 3px;
 font-family: Georgia, serif;
 text-align: center;
 }
+p {
+    font-size: 18px;
+    text-align: center;
+}
 
