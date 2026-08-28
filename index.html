@@ -2,24 +2,116 @@
 <html lang="fr">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ars Captans</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Ars Captans</h1>
-    <p>La créativité trouve sa place.</p>
+    <!-- ACCUEIL -->
+    <header id="accueil">
+        <h1>Ars Captans</h1>
+        <p>La créativité trouve sa place.</p>
+    </header>
 
-    <a href="#dessin" class="bouton-domaine dessin">Dessin</a>
-    <button class="bouton-domaine montage">Montage</button>
-<button class="bouton-domaine ecriture">Écriture</button>
-<section id="dessin">
-    <h2>Dessin</h2>
-    <p>Bienvenue dans mon espace dessin.</p>
-</section>
+    <!-- DOMAINES -->
+    <main>
+
+        <div id="domaines">
+            <button class="bouton-domaine dessin" onclick="afficher('dessin')">
+                Dessin
+            </button>
+
+            <button class="bouton-domaine montage" onclick="afficher('montage')">
+                Montage
+            </button>
+
+            <button class="bouton-domaine ecriture" onclick="afficher('ecriture')">
+                Écriture
+            </button>
+        </div>
+
+        <!-- DESSIN -->
+        <section id="dessin" class="section">
+            <button class="retour" onclick="retourAccueil()">← Retour</button>
+
+            <h2>Dessin</h2>
+
+            <p>
+                Bienvenue dans mon espace dessin.
+            </p>
+
+            <div class="contenu">
+                <p>Mes dessins seront bientôt disponibles ici.</p>
+            </div>
+        </section>
+
+        <!-- MONTAGE -->
+        <section id="montage" class="section">
+            <button class="retour" onclick="retourAccueil()">← Retour</button>
+
+            <h2>Montage</h2>
+
+            <p>
+                Bienvenue dans mon espace montage.
+            </p>
+
+            <div class="contenu">
+                <p>Mes montages seront bientôt disponibles ici.</p>
+            </div>
+        </section>
+
+        <!-- ECRITURE -->
+        <section id="ecriture" class="section">
+            <button class="retour" onclick="retourAccueil()">← Retour</button>
+
+            <h2>Écriture</h2>
+
+            <p>
+                Bienvenue dans mon espace écriture.
+            </p>
+
+            <div class="contenu">
+                <p>Mes écrits seront bientôt disponibles ici.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function afficher(section) {
+
+            // Cache toutes les sections
+            document.querySelectorAll(".section").forEach(function(element) {
+                element.style.display = "none";
+            });
+
+            // Cache les boutons
+            document.getElementById("domaines").style.display = "none";
+
+            // Affiche la section choisie
+            document.getElementById(section).style.display = "block";
+        }
+
+        function retourAccueil() {
+
+            // Cache toutes les sections
+            document.querySelectorAll(".section").forEach(function(element) {
+                element.style.display = "none";
+            });
+
+            // Réaffiche les boutons
+            document.getElementById("domaines").style.display = "block";
+        }
+
+    </script>
+
 </body>
 
 </html>
